@@ -11,20 +11,8 @@
 
 function arrayDiff(a, b) {
   let newArray = [];
-
-  a.forEach((number) => {
-    if (b.includes(number)) {
-      console.log("included");
-    } else {
-      newArray.push(number);
-    }
-  });
-  console.log(newArray);
+  a.forEach(number => {
+    !b.includes(number) ? newArray.push(number) : null;
+  })
   return newArray
 }
-
-// arrayDiff([1, 2, 3], [1, 3]);
-arrayDiff([1, 2], [1]);
-// arrayDiff([1, 2, 2], [2]);
-// arrayDiff([1, 2, 2], []);
-// arrayDiff([], [1, 2]);
