@@ -8,20 +8,23 @@
 
 // }
 
+function absValue(num) {
+  return Math.abs(num);
+}
+
 function invert(array) {
   let newArray = [];
   array.forEach((number) => {
     if (number > 0) {
-      newArray.push(number - (Math.abs(number) + Math.abs(number)));
+      newArray.push(number - absValue(number) * 2);
     } else if (number < 0) {
-      newArray.push(number + (Math.abs(number) + Math.abs(number)));
+      newArray.push(number + absValue(number) * 2);
     } else {
       if (number === 0) {
         newArray.push(-0);
       }
     }
   });
-  console.log(newArray);
   return newArray;
 }
 
