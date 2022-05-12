@@ -16,3 +16,5 @@ function arrayDiff(a, b) {
   });
   return answerArray;
 }
+
+console.log("nice!");
