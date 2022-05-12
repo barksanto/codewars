@@ -10,9 +10,9 @@
 // If number is present in b, remove it from a
 
 function arrayDiff(a, b) {
-  let newArray = [];
-  a.forEach(number => {
-    !b.includes(number) ? newArray.push(number) : null;
-  })
-  return newArray
+  let answerArray = [];
+  a.forEach((number) => {
+    !b.includes(number) ? answerArray.push(number) : null;
+  });
+  return answerArray;
 }
