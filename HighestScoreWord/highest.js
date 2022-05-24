@@ -1,5 +1,7 @@
 function high(x) {
+  // reference alphabet
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  // separate each sentence into an array of words
   const words = x.split(" ");
   let result = words[0];
   let maxScore = 0;
@@ -13,7 +15,7 @@ function high(x) {
 
     if (score > maxScore) {
       maxScore = score;
-      result = word;
+      result = word; //change values if next word is higher score
     }
   });
   console.log(result);
