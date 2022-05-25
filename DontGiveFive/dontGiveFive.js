@@ -1,10 +1,10 @@
 function dontGiveMeFive(start, end) {
   let noFives = [];
-
   for (i = start; i <= end; i++) {
-    noFives.push(i);
+    !i.toString().includes(5) ? noFives.push(i) : null;
   }
-  console.log(noFives);
+  console.log(noFives.length);
+  return noFives.length;
 }
 
 dontGiveMeFive(1, 9);
