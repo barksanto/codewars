@@ -7,21 +7,19 @@
 // This is only here to tell you that you do not need to worry about your solution timing out.
 
 function getMiddle(string) {
-  let answer = "";
+  let middle = "";
   let splitWord = string.split("");
 
   if (splitWord.length % 2 === 0) {
     let wordLength = splitWord.length;
     let firstLetter = wordLength / 2 - 1;
 
-    answer += splitWord[firstLetter];
-    answer += splitWord[firstLetter + 1];
+    middle += splitWord[firstLetter];
+    middle += splitWord[firstLetter + 1];
   } else {
-    answer += splitWord[Math.floor(splitWord.length / 2)];
+    middle += splitWord[Math.floor(splitWord.length / 2)];
   }
-
-  console.log(answer);
-  return answer;
+  return middle;
 }
 
 getMiddle("test");
