@@ -21,15 +21,11 @@ function divisibleByLast(n) {
     } else if (number == 0) {
       answer.push(true);
     } else {
-      if (number % splitArray[index - 1] === 0) {
-        answer.push(true);
-      } else {
-        answer.push(false);
-      }
-      
+      number % splitArray[index - 1] === 0
+        ? answer.push(true)
+        : answer.push(false);
     }
   });
-  console.log(answer);
   return answer;
 }
 
