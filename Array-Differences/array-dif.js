@@ -9,10 +9,26 @@
 
 // If number is present in b, remove it from a
 
-function arrayDiff(a, b) {
-  let answerArray = [];
-  a.forEach((number) => {
-    !b.includes(number) ? answerArray.push(number) : null;
-  });
-  return answerArray;
+// function arrayDiff(a, b) {
+//   let answerArray = [];
+//   a.forEach((number) => {
+//     !b.includes(number) ? answerArray.push(number) : null;
+//   });
+//   return answerArray;
+// }
+
+const fizzBuzz = (n) => {
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz", i)
+    } else if (i % 3 === 0) {
+      console.log("Fizz", i)
+    } else if (i % 5 === 0) {
+      console.log("Buzz")
+    } else {
+      console.log(i)
+    }
+  }
 }
+
+fizzBuzz(15)
